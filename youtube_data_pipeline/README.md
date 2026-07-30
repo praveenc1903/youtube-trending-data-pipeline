@@ -13,7 +13,7 @@ decision, not just to wire services together.
 
 ## Architecture
 
-![Architecture diagram](docs/architecture.png)
+![Architecture diagram](docs/workflow.png)
 
 Raw data lands in **S3 Bronze**, is cleaned and typed into **S3 Silver**, passes
 through a **data-quality gate**, and is aggregated into **S3 Gold** analytics
@@ -147,7 +147,7 @@ retries with backoff, and per-stage failure alerts.
 A full successful execution — every step green, the quality gate passed, and the
 run routed to gold:
 
-![Step Functions successful execution](docs/step_functions_run.png)
+![Step Functions successful execution](docs/step_fuction.png)
 
 ---
 
