@@ -1,0 +1,25 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3FullAccess",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::yt-data-pipeline-bronze-us-east-1-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-bronze-us-east-1-dev",
+                "arn:aws:s3:::yt-data-pipeline-silver-us-east-1-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-silver-us-east-1-dev",
+                "arn:aws:s3:::yt-data-pipeline-gold-us-east-1-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-gold-us-east-1-dev",
+                "arn:aws:s3:::yt-data-pipeline-scripts-us-east-1-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-scripts-us-east-1-dev"
+            ]
+        }
+    ]
+}

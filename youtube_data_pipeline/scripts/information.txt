@@ -1,0 +1,16 @@
+yt-pipeline-bronze-us-east-1 --Bronze bucket name
+
+yt-pipeline-silver-us-east-1 -- Silver bucket name 
+
+yt-pipeline-gold-us-east-1 -- gold bucket name 
+
+yt-pipeline-scripts-us-east-1
+
+
+SNS_ALERT_TOPIC_ARN  : arn:aws:sns:us-east-1:755922498863:yt-data-pipeline-alerts-dev:2fbc18c8-d266-4ea4-8308-971c305e6d12
+
+glue bronze - yt-pipeline-bronze-dev
+
+glue silver -yt-pipeline-silver-dev
+
+glue gold - yt-pipeline-gold-dev

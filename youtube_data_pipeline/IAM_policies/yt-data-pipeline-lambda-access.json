@@ -1,0 +1,50 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3Access",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::yt-data-pipeline-bronze-us-east-1-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-bronze-us-east-1-dev",
+                "arn:aws:s3:::yt-data-pipeline-silver-us-east-1-dev/*",
+                "arn:aws:s3:::yt-data-pipeline-silver-us-east-1-dev"
+            ]
+        },
+        {
+            "Sid": "GlueAccess",
+            "Effect": "Allow",
+            "Action": [
+                "glue:GetTable",
+                "glue:GetDatabase",
+                "glue:CreateTable",
+                "glue:UpdateTable",
+                "glue:GetPartitions",
+                "glue:CreatePartition",
+                "glue:BatchCreatePartition"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "SNSAccess",
+            "Effect": "Allow",
+            "Action": "sns:Publish",
+            "Resource": "arn:aws:sns:us-east-1:YOUR_ACCOUNT_ID:yt-data-pipeline-*"
+        },
+        {
+            "Sid": "AthenaAccess",
+            "Effect": "Allow",
+            "Action": [
+                "athena:StartQueryExecution",
+                "athena:GetQueryExecution",
+                "athena:GetQueryResults"
+            ],
+            "Resource": "*"
+        }
+    ]
+}

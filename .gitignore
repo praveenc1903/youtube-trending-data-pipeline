@@ -1,0 +1,17 @@
+# Data — 540MB, belongs on Kaggle not GitHub
+data/
+
+# Secrets / local notes
+scripts/information.txt
+*.env
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS / editor
+.DS_Store
+.vscode/
